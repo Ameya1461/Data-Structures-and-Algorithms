@@ -29,6 +29,17 @@ class Stack:
             return None
         return self.top
 
+    def isEmpty(self):
+        if self.top == None:
+            return True
+        else:
+            return False
+        
+    def clear(self):
+        self.top = None
+        self.length = 0
+
+
 
 newStack = Stack()
 newStack.push(10)
