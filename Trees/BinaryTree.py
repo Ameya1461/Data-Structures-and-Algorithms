@@ -92,6 +92,77 @@ def insertBT(rootNode, newNode):
             else:
                 root.value.rightChild = newNode
                 return "Successfully inserted"
+
+# Delete a Node in BT has to done by these 3 method belows -- find deepestnode, delete deepest node, delete node we want and replace by deepestnode
+def getDeepestNode(rootNode):
+    if not rootNode:
+        return "The BT doesen't exist!"
+    else:
+        customQueue = queue.Queue()
+        customQueue.enqueue(rootNode)
+        while not (customQueue.isEmpty()):
+            root = customQueue.dequeue()
+            if (root.value.leftChild is not None):
+                customQueue.enqueue(root.value.leftChild)
+            if (root.value.rightChild is not None):
+                customQueue.enqueue(root.value.rightChild)
+        deepestNode = root.value
+        return deepestNode
+
+def deleteDeepestNode(rootNode, dNode):
+    if not rootNode:
+        return "BT dosen't exist!"
+    else:
+        customQueue = queue.Queue()
+        customQueue.enqueue(rootNode)
+        while not (customQueue.isEmpty()):
+            root = customQueue.dequeue()
+            if root.value == dNode:
+                root.value = None
+                return "Successfully Deleted!!!"
+            if root.value.leftChild is not None:
+                if root.value.leftChild == dNode:
+                    root.value.leftChild = None
+                    return "Deleted!!"
+                else:
+                    customQueue.enqueue(root.value.leftChild)
+            if root.value.rightChild is not None:
+                if root.value.rightChild == dNode:
+                    root.value.rightChild = None
+                    return "Deleted!!"
+                else:
+                    customQueue.enqueue(root.value.rightChild)
+
+def deleteNodeBT(rootNode, node):   # O(N), O(N)
+    if not rootNode:
+        return "BT doesn't exist!"
+    else:
+        customQueue = queue.Queue()
+        customQueue.enqueue(rootNode)
+        while not (customQueue.isEmpty()):  #O(N)
+            root = customQueue.dequeue()
+            if root.value.data == node:
+                dNode = getDeepestNode(rootNode)  # O(N) --- 2nd O(n) still total is O(N)
+                root.value.data = dNode.data
+                deleteDeepestNode(rootNode, dNode)
+                return "Deleted the node and replaced with deepest Node!"
+            if (root.value.leftChild is not None):
+                customQueue.enqueue(root.value.leftChild)
+            if (root.value.rightChild is not None):
+                customQueue.enqueue(root.value.rightChild)
+
+def deleteBT(rootNode):
+    rootNode.data = None
+    rootNode.leftChild = None
+    rootNode.rightChild = None
+    return "Deleted the entire BT"
+
+print(deleteBT(newBT))
+print(newBT.data)
+# levelOrderTraversal(newBT)   
+# print("---------") 
+# deleteNodeBT(newBT, 'Cold')
+# levelOrderTraversal(newBT)
             
 # preOrderTraversal(newBT)
 # print("-------")
@@ -103,6 +174,6 @@ def insertBT(rootNode, newNode):
 # print("-------")
 # print(searchBT(newBT,'Tea'))
 
-newNode = TreeNode('Cola')
-print(insertBT(newBT, newNode))
-levelOrderTraversal(newBT)
+# newNode = TreeNode('Cola')
+# print(insertBT(newBT, newNode))
+# levelOrderTraversal(newBT)
