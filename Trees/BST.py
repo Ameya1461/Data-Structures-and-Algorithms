@@ -1,7 +1,7 @@
 # Implementation of Binary Search Tree:
 import QueueLinkedList as queue 
 class BSTNode:
-    def __init__(self,data):
+    def __init__(self,data):   # O(1) --> Creation of BST
         self.data = data
         self.leftChild = None
         self.rightChild = None
@@ -11,7 +11,7 @@ def insert(rootNode, nodeValue):  # O(Log N)
         rootNode.data = nodeValue
     elif nodeValue <= rootNode.data:
         if rootNode.leftChild is None:
-            rootNode.leftChild = BSTNode(nodeValue)   # same reason here as well
+            rootNode.leftChild = BSTNode(nodeValue)   # show be a node and not a value, hence added BSTNode()
         else:
             insert(rootNode.leftChild, nodeValue)
     else:
@@ -22,7 +22,7 @@ def insert(rootNode, nodeValue):  # O(Log N)
     return "Inserted"
 
 # DFS 1 -- USING STACK  --> root,left,right
-def preOrderTraversal(rootNode):
+def preOrderTraversal(rootNode):  # O(N) for all traversals
     if not rootNode:
         return
     print(rootNode.data)
@@ -75,7 +75,41 @@ def searchNode(rootNode, nodeValue):  # O(Log N)
         else:
             searchNode(rootNode.rightChild, nodeValue)
 
+# Delete a node in BST --> find minimun in rightsubtree first
+def minValueNode(bstNode):
+    current = bstNode
+    while current.leftChild is not None:
+        current = current.leftChild
+    return current
 
+def deleteNodeBST(rootNode, nodeValue):  # O(log N) for both
+    if not rootNode:
+        return rootNode
+    if nodeValue < rootNode.data:
+        rootNode.leftChild = deleteNodeBST(rootNode.leftChild, nodeValue)  # O(n/2)
+    elif nodeValue > rootNode.data:  
+        rootNode.rightChild = deleteNodeBST(rootNode.rightChild, nodeValue)  # O(n/2)
+    else: ## Delete a node with 1 child or none child(leaf node)
+        if rootNode.leftChild is None:
+            temp = rootNode.rightChild
+            rootNode = None
+            return temp
+        
+        if rootNode.rightChild is None:
+            temp = rootNode.leftChild
+            rootNode = None
+            return temp
+        
+        temp = minValueNode(rootNode.rightChild)  # We got the min (successor)  # O(LogN)
+        rootNode.data = temp.data  # replace value of that node with minimun value
+        rootNode.rightChild = deleteNodeBST(rootNode.rightChild, temp.data)  ## Goes to the right subtree and calls delete recursively to get temp node from rightChild # O(n/2)
+    return rootNode
+
+def deleteBST(rootNode):
+    rootNode.data = None
+    rootNode.leftChild = None
+    rootNode.rightChild = None
+    return "BST is deleted successfully"
 
 newBST = BSTNode(None)
 
