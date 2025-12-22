@@ -1,23 +1,26 @@
-# t = 'a', 'b', 'c'
-# print(t)
+# Implementation of Tuples --> comma sperated values
+# only supports .index() and .count() methods
+
+t = 'a', 'b', 'c'
+print(t)
 
 
-# t1 = ('a', 'b', 'c', 'd')
-# for i in range(len(t1)):
-#     print(t1[i])
+t1 = ('a', 'b', 'c', 'd')
+for i in range(len(t1)):
+    print(t1[i])
 
-# # print(t1.index('a'))
-# print('a' in t1)
+# print(t1.index('a'))
+print('a' in t1)
 
 
-# t1 = ('a', 'b', 'c', 'd')
-# def searchElement(tup, element):
-#     for char in t1:
-#         if char == element:
-#             return f"Found  {element}"
-#     return "Not Found!!!"
+t1 = ('a', 'b', 'c', 'd')
+def searchElement(tup, element):
+    for char in t1:
+        if char == element:
+            return f"Found  {element}"
+    return "Not Found!!!"
 
-# print(searchElement(t1,'r'))
+print(searchElement(t1,'r'))
 
 input_tuple = (1, 2, 3, 4)
 def sum_product(input_tuple):
