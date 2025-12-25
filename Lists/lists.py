@@ -48,8 +48,6 @@ while (True):
 					
 print('Average:', average)
 
-
-
 numlist = list() 
 while (True):
     inp = input('Enter a number: ') 

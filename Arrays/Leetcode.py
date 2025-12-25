@@ -53,4 +53,15 @@ class Solution:
                 right -= 1
         return True
         
-        
+#Q 26- Remove Duplicates in a sorted arrays
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        digitSet = []
+        for i in range(0, len(nums) -1 ):
+            for j in range(i + 1, len(nums) - 1):
+                if nums[i] != nums[j]:
+                    continue
+                nums.pop(j)
+        # return len(nums)
+        # return list((nums))
+        print(list(set(nums)))        

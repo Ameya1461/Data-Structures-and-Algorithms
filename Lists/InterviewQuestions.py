@@ -157,7 +157,7 @@ def contains_duplicate(nums):
 
 # Example usage
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
-print(contains_duplicates(nums))  # Output: True
+print(contains_duplicate(nums))  # Output: True
 
 
 #Permutation
