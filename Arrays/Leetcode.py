@@ -77,3 +77,15 @@ class Solution:
 #             digits[i] = 0
 #         return [1] + digits
         
+
+# Q41 First Missing Positive
+# class Solution:
+#     def firstMissingPositive(self, nums: List[int]) -> int:
+#         dictTrack = {}
+#         smallestPositiveNum = 1
+#         for i in range(len(nums)):
+#             if nums[i] not in dictTrack:
+#                 dictTrack[nums[i]] = i
+#         while smallestPositiveNum in dictTrack:
+#             smallestPositiveNum += 1
+#         return smallestPositiveNum
