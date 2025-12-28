@@ -54,14 +54,26 @@ class Solution:
         return True
         
 #Q 26- Remove Duplicates in a sorted arrays
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        digitSet = []
-        for i in range(0, len(nums) -1 ):
-            for j in range(i + 1, len(nums) - 1):
-                if nums[i] != nums[j]:
-                    continue
-                nums.pop(j)
-        # return len(nums)
-        # return list((nums))
-        print(list(set(nums)))        
+# class Solution:
+#     def removeDuplicates(self, nums: List[int]) -> int:
+#         digitSet = []
+#         for i in range(0, len(nums) -1 ):
+#             for j in range(i + 1, len(nums) - 1):
+#                 if nums[i] != nums[j]:
+#                     continue
+#                 nums.pop(j)
+#         # return len(nums)
+#         # return list((nums))
+#         print(list(set(nums)))        
+
+
+# Q66- Plus One
+# class Solution:
+#     def plusOne(self, digits: List[int]) -> List[int]:
+#         for i in range(len(digits) - 1, -1, -1):
+#             if digits[i] < 9:
+#                 digits[i] += 1
+#                 return digits
+#             digits[i] = 0
+#         return [1] + digits
+        
