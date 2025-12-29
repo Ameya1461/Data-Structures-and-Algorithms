@@ -89,3 +89,23 @@ class Solution:
 #         while smallestPositiveNum in dictTrack:
 #             smallestPositiveNum += 1
 #         return smallestPositiveNum
+
+
+# Q136 - Single Number
+# class Solution:
+#     def singleNumber(self, nums: List[int]) -> int:
+#         result = 0  # To store the XOR value
+#         for num in nums:
+#             result = num ^ result
+#         return result
+
+        # brute force - O(N) both below soln
+        # dictSet = {}
+        # for i in range(len(nums)):
+        #     if nums[i] not in dictSet:
+        #         dictSet[nums[i]] = 1
+        #     else:
+        #         dictSet[nums[i]] = 2
+        # for key in dictSet:
+        #     if dictSet[key] == 1:
+        #         return key
