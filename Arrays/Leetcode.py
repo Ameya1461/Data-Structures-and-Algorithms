@@ -109,3 +109,54 @@ class Solution:
         # for key in dictSet:
         #     if dictSet[key] == 1:
         #         return key
+
+
+# Q34
+# class Solution:
+#     def searchRange(self, nums: List[int], target: int) -> List[int]:
+
+        # i = 0
+        # result = []
+        # while i < len(nums):
+        #     if nums[i] == target:
+        #         result.append(i)
+        #     i += 1
+        # if not result:
+        #     return [-1, -1]
+        # return [result[0], result[-1]]
+
+        # binary search
+        # def leftBS():
+        #     l = 0
+        #     r = len(nums) - 1
+        #     i = -1
+        #     while l <= r:
+        #         mid = (l + r) // 2
+        #         if nums[mid] >= target:
+        #             r = mid - 1
+        #         else:
+        #             l = mid + 1
+                
+        #         if nums[mid] == target:
+        #             i = mid
+            
+        #     return i
+
+        # def rightBS():
+        #     l = 0
+        #     r = len(nums) - 1
+        #     i = -1
+        #     while l <= r:
+        #         mid = (l + r) // 2
+        #         if nums[mid] <= target:
+        #             l = mid + 1
+        #         else:
+        #             r = mid - 1
+                
+        #         if nums[mid] == target:
+        #             i = mid
+            
+        #     return i
+        # return (leftBS(), rightBS())
+
+
