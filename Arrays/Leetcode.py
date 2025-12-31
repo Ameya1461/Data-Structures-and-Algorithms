@@ -53,7 +53,7 @@ class Solution:
                 right -= 1
         return True
         
-#Q 26- Remove Duplicates in a sorted arrays
+# Q26- Remove Duplicates in a sorted arrays
 # class Solution:
 #     def removeDuplicates(self, nums: List[int]) -> int:
 #         digitSet = []
@@ -159,4 +159,13 @@ class Solution:
         #     return i
         # return (leftBS(), rightBS())
 
-
+# Q27 - REMOVE ELEMENT
+# class Solution:
+#     def removeElement(self, nums: List[int], val: int) -> int:
+#         # 2 pointer approach
+#         i = 0
+#         for j in range(len(nums)):
+#             if nums[j] != val:
+#                 nums[i] = nums[j]
+#                 i += 1
+#         return i
