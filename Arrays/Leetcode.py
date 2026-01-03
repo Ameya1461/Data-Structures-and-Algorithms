@@ -169,3 +169,21 @@ class Solution:
 #                 nums[i] = nums[j]
 #                 i += 1
 #         return i
+
+## Q80 
+# class Solution:
+#     def removeDuplicates(self, nums: List[int]) -> int:
+#         j = 1
+#         count = 1
+#         for i in range(1, len(nums)):
+#             if nums[i] == nums[i - 1]:
+#                 count += 1
+#             else:
+#                 count = 1
+#             if count <= 2:
+#                 nums[j] = nums[i]
+#                 j += 1
+#         return j
+## KEEPING j so that we can replace with nums[i] if count goes beyond 2
+## 1 1 1 2
+#       j i  --> replace it 
