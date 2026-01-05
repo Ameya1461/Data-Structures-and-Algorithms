@@ -187,3 +187,27 @@ class Solution:
 ## KEEPING j so that we can replace with nums[i] if count goes beyond 2
 ## 1 1 1 2
 #       j i  --> replace it 
+
+
+# Q53 
+# class Solution:
+#     def maxSubArray(self, nums: List[int]) -> int:
+#         current_sum = nums[0]
+#         max_sum = nums[0]
+
+#         for i in range(1, len(nums)):
+#             current_sum = max(nums[i], current_sum + nums[i])
+#             max_sum = max(max_sum, current_sum)
+
+#         return max_sum
+
+        # current_sum = 0
+        # maxresult = nums[0]
+        # for i in range(len(nums)): # 1
+        #     for j in range(i, len(nums)):
+        #         current_sum += nums[j]  # 
+        #         if current_sum > maxresult:  # 
+        #             maxresult = current_sum  # 2
+        #     current_sum = 0
+        # return maxresult
+            
