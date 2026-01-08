@@ -106,4 +106,19 @@ class Solution:
         else:
             return False
 
+# Q49
+# from collections import defaultdict
+# class Solution:
+#     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+#         anagram_dict = defaultdict(list)
+    
+#         for words in strs:
+#             count = [0] * 26
+#             for char in words:
+#                 count[ord(char) - 97] += 1  # a--> 1, b--> 2
+
+#             key = tuple(count)
+#             anagram_dict[key].append(words)
+#         return list(anagram_dict.values())
+
 
