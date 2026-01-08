@@ -47,5 +47,35 @@ class Solution:
             res = max(res, r - l + 1)
         return res
 
+# Q567
+class Solution:
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        n1 = len(s1)
+        n2 = len(s2)
+
+        if n1 > n2:
+            return False
+        
+        # Initialing storing value of each char as 0
+        count_s1 = [0] * 26
+        count_s2 = [0] * 26
+
+        # s1 = [97 98]  s2 = [103 107]  ASCII values
+        for i in range(n1):
+            count_s1[ord(s1[i]) - 97] += 1
+            count_s2[ord(s2[i]) - 97] += 1
+
+        if count_s1 == count_s2:
+            return True
+
+        for i in range(n1,n2):
+            count_s2[ord(s2[i]) - 97] += 1
+            count_s2[ord(s2[i - n1]) - 97] -= 1
+
+            if count_s1 == count_s2:
+                return True
+        return False
+
+
         
 
