@@ -77,5 +77,33 @@ class Solution:
         return False
 
 
+# Q242
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # if len(s) != len(t):
+        #     return False
         
+        # if sorted(s) == sorted(t):
+        #     return True
+        # else:
+        #     return False
+        
+        n1 = len(s)
+        n2 = len(t)
+
+        if n1 != n2:
+            return False
+
+        count_s = [0] * 26
+        count_t = [0] * 26
+        
+        for i in range(n1):
+            count_s[ord(s[i]) - 97] += 1
+            count_t[ord(t[i]) - 97] += 1
+        
+        if count_s == count_t:
+            return True
+        else:
+            return False
+
 
