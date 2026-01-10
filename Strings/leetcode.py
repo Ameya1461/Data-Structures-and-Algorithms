@@ -170,8 +170,15 @@ class Solution:
         return -1
         
 
-        
-
+# Q2351       
+class Solution:
+    def repeatedCharacter(self, s: str) -> str:
+        hashset = set()  # can take list, dict -- anything, since all lowercase lookup for 26chars hence O(1)
+        for i in range(len(s)):
+            if s[i] not in hashset:
+                hashset.add(s[i])
+            else:
+                return s[i]
 
 
        
