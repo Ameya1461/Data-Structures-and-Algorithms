@@ -46,7 +46,7 @@ print("Step 8")
 my_array.pop()
 print(my_array)
 
-# 9. Fetch any element through its index using index() method
+# 9. Fetch any element through its index using index() 
 print("Step 9")
 print(my_array.index(21))
 
