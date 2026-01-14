@@ -41,7 +41,7 @@ print("Step 7")
 my_array.remove(11)
 print(my_array)
 
-# 8. Remove last array element using pop() method
+# 8. Remove last array element using pop() 
 print("Step 8")
 my_array.pop()
 print(my_array)
