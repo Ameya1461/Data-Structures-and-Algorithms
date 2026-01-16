@@ -15,23 +15,23 @@
 
 
 # Q125 - Valid Palindrome
-# class Solution:
-#     def isPalindrome(self, s: str) -> bool:
-#         charset = []
-#         for char in s.lower():
-#             if char.isalnum():
-#                 charset.append(char)
-#         # return charset
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        charset = []
+        for char in s.lower():
+            if char.isalnum():
+                charset.append(char)
+        # return charset
 
-#         left = 0
-#         right = len(charset) - 1
-#         while left < right:
-#             if charset[left] != charset[right]:
-#                 return False
-#             else:
-#                 left += 1
-#                 right -= 1
-#         return True
+        left = 0
+        right = len(charset) - 1
+        while left < right:
+            if charset[left] != charset[right]:
+                return False
+            else:
+                left += 1
+                right -= 1
+        return True
         
 # Q3
 class Solution:
