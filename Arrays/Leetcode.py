@@ -224,3 +224,34 @@ class Solution:
 #             else:
 #                 current_count = 0
 #         return max_count
+
+# Q128
+# class Solution:
+#     def longestConsecutive(self, nums: List[int]) -> int:
+#         longest = 0
+#         length = 0
+#         s = set(nums)
+#         for num in nums:
+#             if num - 1 not in s:
+#                 next_num = num + 1
+#                 length = 1
+#                 while next_num in s:
+#                     length += 1
+#                     next_num += 1
+#                 longest = max(longest, length)
+#         return longest
+
+# Brute Force by sorting
+        # result = sorted(nums)
+        # count = 1
+        # maxcount = 1
+        # for j in range(1, len(result)):
+        #     if result[j] == result[j - 1] + 1:
+        #         count += 1
+        #     elif result[j] == result[j - 1]:
+        #         continue
+        #     else:
+        #         maxcount = max(maxcount, count)
+        #         count = 1
+        # return max(count, maxcount)
+
