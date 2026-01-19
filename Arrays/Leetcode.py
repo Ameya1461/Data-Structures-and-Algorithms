@@ -289,3 +289,41 @@ class Solution:
 #                     return res
         
 
+# Q238
+# class Solution:
+#     def productExceptSelf(self, nums: List[int]) -> List[int]:
+#         n = len(nums)
+#         res = [1] * n
+
+#         prefix = 1
+#         for i in range(n):
+#             res[i] = prefix
+#             prefix *= nums[i]
+
+#         suffix = 1
+#         for i in range(n - 1, -1, -1):
+#             res[i] *= suffix
+#             suffix *= nums[i]
+
+#         return res
+
+        # res = []
+        # product = 1
+        # zeros = 0
+        # for num in nums:
+        #     if num == 0:
+        #         zeros = zeros + 1
+        #     else:
+        #         product *= num
+
+        # for num in nums:
+        #     if zeros > 1:
+        #         res.append(0)
+        #     elif zeros == 1:
+        #         if num == 0:
+        #             res.append(int(product))
+        #         else:
+        #             res.append(0)
+        #     else:
+        #         res.append(int(product / num))
+        # return res
