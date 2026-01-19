@@ -265,3 +265,27 @@ class Solution:
 #             else:
 #                 return True
 #         return False
+
+
+# Q347  
+# class Solution:
+#     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+#         count = {} # keeps a count of all num in nums
+#         freq = [[] for i in range(len(nums) + 1)] 
+#         # freq = [[], [], [],[],..]
+
+#         for num in nums:
+#             count[num] = 1 + count.get(num,0)   #get the count of that num, else 0 if not & add 1
+#         for num, count in count.items():
+#             freq[count].append(num)  
+#             #   0   1  2   3  4  5   6   index(count) bucket sort
+#             # [[],[1],[2],[3],[],[],[]]  number
+        
+#         res = []
+#         for i in range(len(freq) - 1, 0, -1):  # iterate freq from last
+#             for num in freq[i]: 
+#                 res.append(num)
+#                 if len(res) == k:
+#                     return res
+        
+
