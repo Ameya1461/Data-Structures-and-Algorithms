@@ -307,6 +307,7 @@ class Solution:
 
 #         return res
 
+
         # res = []
         # product = 1
         # zeros = 0
@@ -326,4 +327,4 @@ class Solution:
         #             res.append(0)
         #     else:
         #         res.append(int(product / num))
-        # return res
+        # return res   
