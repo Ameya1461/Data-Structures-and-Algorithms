@@ -8,6 +8,9 @@ def bubbleSort(customList):
     print(customList)
 
 
+# SelectionSort --> Find the min between the elements and place it in first place - basically swap the min with first element.
+                   # Continue this until all elements are sorted
+                   # O(N^2), O(1)
 def selectionSort(customList):
     for i in range(len(customList)):
         min_index = i
