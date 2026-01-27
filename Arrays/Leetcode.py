@@ -20,38 +20,38 @@
 #         return
         
 # Q3
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        charSet = set()
-        res = 0
-        l = 0
-        for r in range(len(s)):
-            while s[r] in charSet:
-                charSet.remove(s[l])
-                l += 1
-            charSet.add(s[r])
-            res = max(res, r - l + 1)
-        return res
+# class Solution:
+#     def lengthOfLongestSubstring(self, s: str) -> int:
+#         charSet = set()
+#         res = 0
+#         l = 0
+#         for r in range(len(s)):
+#             while s[r] in charSet:
+#                 charSet.remove(s[l])
+#                 l += 1
+#             charSet.add(s[r])
+#             res = max(res, r - l + 1)
+#         return res
     
 
-# Q125
-class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        charset = []
-        for char in s.lower():
-            if char.isalnum():
-                charset.append(char)
+# # Q125
+# class Solution:
+#     def isPalindrome(self, s: str) -> bool:
+#         charset = []
+#         for char in s.lower():
+#             if char.isalnum():
+#                 charset.append(char)
 
 
-        left = 0
-        right = len(charset) - 1
-        while left < right:
-            if charset[left] != charset[right]:
-                return False
-            else:
-                left += 1
-                right -= 1
-        return True
+#         left = 0
+#         right = len(charset) - 1
+#         while left < right:
+#             if charset[left] != charset[right]:
+#                 return False
+#             else:
+#                 left += 1
+#                 right -= 1
+#         return True
         
 # Q26- Remove Duplicates in a sorted arrays
 # class Solution:
