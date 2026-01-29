@@ -154,20 +154,20 @@ class Solution:
         return reversed_number
 
 # Q387
-from collections import defaultdict
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        count = defaultdict(int)
+# from collections import defaultdict
+# class Solution:
+#     def firstUniqChar(self, s: str) -> int:
+#         count = defaultdict(int)
 
-        # first iteration to keep a track of the count
-        for char in s:
-            count[char] = count[char] + 1   ## 0 + 1 --> defaultvalue 0 ahe
+#         # first iteration to keep a track of the count
+#         for char in s:
+#             count[char] = count[char] + 1   ## 0 + 1 --> defaultvalue 0 ahe
         
-        # 2nd iteration of find which char with count 1 is first
-        for i,char in enumerate(s):
-            if count[char] == 1:
-                return i
-        return -1
+#         # 2nd iteration of find which char with count 1 is first
+#         for i,char in enumerate(s):
+#             if count[char] == 1:
+#                 return i
+#         return -1
         
 
 # Q2351       
