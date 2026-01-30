@@ -136,22 +136,22 @@ class Solution:
         
 
 # Q7
-class Solution:
-    def reverse(self, x: int) -> int:
-        is_negative = x < 0  # True or False
-        x = abs(x)
-        reversed_number = 0
-        while x > 0:
-            reversed_number = reversed_number * 10 + (x % 10)  # % --> remainder
-            x = x // 10   # //  --> round off value
+# class Solution:
+#     def reverse(self, x: int) -> int:
+#         is_negative = x < 0  # True or False
+#         x = abs(x)
+#         reversed_number = 0
+#         while x > 0:
+#             reversed_number = reversed_number * 10 + (x % 10)  # % --> remainder
+#             x = x // 10   # //  --> round off value
 
-        if is_negative:
-            reversed_number = -(reversed_number)
+#         if is_negative:
+#             reversed_number = -(reversed_number)
         
-        if reversed_number < -2**31 or reversed_number > 2**31 - 1:
-            return 0
+#         if reversed_number < -2**31 or reversed_number > 2**31 - 1:
+#             return 0
         
-        return reversed_number
+#         return reversed_number
 
 # Q387
 # from collections import defaultdict
