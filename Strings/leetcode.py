@@ -122,17 +122,17 @@ class Solution:
 #         return list(anagram_dict.values())
 
 # Q9
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        res = str(x)
-        left_pointer = 0
-        right_pointer = len(res) - 1
-        while left_pointer < right_pointer:
-            if res[left_pointer] != res[right_pointer]:
-                return False
-            left_pointer += 1
-            right_pointer -=1
-        return True
+# class Solution:
+#     def isPalindrome(self, x: int) -> bool:
+#         res = str(x)
+#         left_pointer = 0
+#         right_pointer = len(res) - 1
+#         while left_pointer < right_pointer:
+#             if res[left_pointer] != res[right_pointer]:
+#                 return False
+#             left_pointer += 1
+#             right_pointer -=1
+#         return True
         
 
 # Q7
