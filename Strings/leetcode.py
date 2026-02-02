@@ -88,23 +88,23 @@ class Solution:
         # else:
         #     return False
         
-        n1 = len(s)
-        n2 = len(t)
+        # n1 = len(s)
+        # n2 = len(t)
 
-        if n1 != n2:
-            return False
+        # if n1 != n2:
+        #     return False
 
-        count_s = [0] * 26
-        count_t = [0] * 26
+        # count_s = [0] * 26
+        # count_t = [0] * 26
         
-        for i in range(n1):
-            count_s[ord(s[i]) - 97] += 1
-            count_t[ord(t[i]) - 97] += 1
+        # for i in range(n1):
+        #     count_s[ord(s[i]) - 97] += 1
+        #     count_t[ord(t[i]) - 97] += 1
         
-        if count_s == count_t:
-            return True
-        else:
-            return False
+        # if count_s == count_t:
+        #     return True
+        # else:
+        #     return False
 
 # Q49
 # from collections import defaultdict
